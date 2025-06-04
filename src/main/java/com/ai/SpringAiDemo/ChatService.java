@@ -29,6 +29,6 @@ public class ChatService {
                                 .build()
                 ));
 
-        return response.getResult().getOutput().toString();
+        return response.getResult().getOutput().getText();
     }
 }
