@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 import ImageGeneretorComponent from './components/ImageGeneretorComponent'
+import TalkToAIComponent from './components/TalkToAIComponent'
+import CreateRecipeComponent from './components/CreateRecipeComponent'
 
 function App() {
   const [operation, setOperation] = useState("Generate Image")
@@ -27,6 +29,8 @@ function App() {
     </div>
 
     <ImageGeneretorComponent/>
+    <TalkToAIComponent/>
+    <CreateRecipeComponent/>
     </>
   )
 }
