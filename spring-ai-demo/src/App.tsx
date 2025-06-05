@@ -28,9 +28,8 @@ function App() {
       <h3 className="text-xl font-semibold text-gray-800">{operation}</h3>
     </div>
 
-    <ImageGeneretorComponent/>
-    <TalkToAIComponent/>
-    <CreateRecipeComponent/>
+    <TalkToAIComponent/> 
+   
     </>
   )
 }
