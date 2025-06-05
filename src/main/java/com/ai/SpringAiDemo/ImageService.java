@@ -1,6 +1,5 @@
 package com.ai.SpringAiDemo;
 
-import org.springframework.ai.image.ImageModel;
 import org.springframework.ai.image.ImagePrompt;
 import org.springframework.ai.image.ImageResponse;
 import org.springframework.ai.openai.OpenAiImageModel;
@@ -18,10 +17,8 @@ public class ImageService {
     }
 
     public ImageResponse generateImage(String prompt,
-                                      String quality,
-                                      int n,
-                                      int width,
-                                      int height){
+
+                                       int n, int width, int height) {
 //        ImageResponse imageResponse = openAiImageModel.call(
 //                new ImagePrompt(prompt));
 
@@ -36,15 +33,9 @@ public class ImageService {
 //        );
 
 
-        ImageResponse imageResponse = openAiImageModel.call(
-                new ImagePrompt(prompt,
-                        OpenAiImageOptions.builder()
-                                .model("dall-e-2")
-                                .quality(quality)
-                                .N(n)
-                                .height(height)
-                                .width(width).build())
-        );
+        ImageResponse imageResponse = openAiImageModel.call(new ImagePrompt(prompt, OpenAiImageOptions.builder().model("dall-e-2")
+
+                .N(n).height(height).width(width).build()));
 
         return imageResponse;
     }
